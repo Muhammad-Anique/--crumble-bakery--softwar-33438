@@ -1,0 +1,152 @@
+/* CSS Reset and Base Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Color Palette */
+:root {
+    --bg-color: #f8f5f0;
+    --primary-text: #2c1810;
+    --accent-color: #d4a574;
+}
+
+/* Mobile-First Layout Engine */
+body {
+    font-family: system-ui, -apple-system, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--primary-text);
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+/* Header Styling */
+header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-text);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Main Content */
+main {
+    text-align: center;
+    max-width: 90%;
+    width: 100%;
+}
+
+main h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--accent-color);
+}
+
+main p {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+}
+
+/* Form Styling - Mobile First */
+.signup-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 2rem 0;
+    align-items: center;
+}
+
+.signup-form label {
+    font-weight: bold;
+    align-self: flex-start;
+}
+
+.signup-form input[type="email"] {
+    padding: 0.75rem;
+    border: 2px solid var(--accent-color);
+    border-radius: 4px;
+    font-size: 1rem;
+    width: 100%;
+    max-width: 300px;
+}
+
+.signup-form button {
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    padding: 0.75rem 2rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.signup-form button:hover {
+    background-color: #c19660;
+}
+
+/* Footer Styling */
+footer {
+    margin-top: 3rem;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.social-links {
+    margin-bottom: 1rem;
+}
+
+.social-links p {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.social-links a {
+    color: var(--accent-color);
+    text-decoration: none;
+    margin: 0 0.5rem;
+    display: block;
+    margin-bottom: 0.25rem;
+}
+
+.social-links a:hover {
+    color: #c19660;
+}
+
+address p {
+    margin-bottom: 0.25rem;
+    font-style: normal;
+}
+
+/* Desktop Responsive Design */
+@media (min-width: 480px) {
+    main {
+        max-width: 500px;
+    }
+    
+    .signup-form {
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-end;
+    }
+    
+    .signup-form label {
+        align-self: center;
+        margin-right: 1rem;
+    }
+    
+    .social-links a {
+        display: inline;
+        margin: 0 1rem;
+    }
+}
